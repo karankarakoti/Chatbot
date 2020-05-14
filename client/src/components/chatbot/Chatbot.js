@@ -220,7 +220,7 @@ class Chatbot extends Component{
             }
     }
     
-    renderMessages(stateMessages){
+    renderMessages(returnedMessages){
         if(returnedMessages){
             return returnedMessages.map((message,i)=>{
                return this.renderOneMessage(message,i);
