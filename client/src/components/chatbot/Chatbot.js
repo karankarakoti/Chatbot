@@ -68,6 +68,8 @@ class Chatbot extends Component{
                 },
             }
         };
+        await this.df_client_call(request);
+    };
         async this.df_client_call(request){
         try{
             if(this.state.clientToken===false){
