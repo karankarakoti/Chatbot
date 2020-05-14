@@ -6,7 +6,7 @@ const Card=(props)=>{
         <div style={{float:'left', paddingRight:30, height:270}}>
             <div className="card">
                 <div className="card-image" style={{width:240}}>
-                    <img src={props.payload..image} alt={props.payload.header}/>
+                    <img src={props.payload.image} alt={props.payload.header}/>
                         <span className="card-title">{props.payload.header}</span>
                 </div>
                 <div className="card-content">
