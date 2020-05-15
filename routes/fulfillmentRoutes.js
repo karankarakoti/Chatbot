@@ -1,8 +1,8 @@
 const {webhookClient}=require('dialogflow-fulfillment');
-
+ 
 const mongoose=require('mongoose');
 const Demand=mongoose.model('demand');
-const Coupon=mongoose.model('coupon');
+const Coupon=mongoose.model('coupons');
 const Registration=mongoose.model('registration');
 
 module.exports=app=>{

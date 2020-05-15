@@ -224,7 +224,8 @@ class Chatbot extends Component{
         if(returnedMessages){
             return returnedMessages.map((message,i)=>{
                return this.renderOneMessage(message,i);
-            });
+            }
+            )
         }
         else{
             return null;

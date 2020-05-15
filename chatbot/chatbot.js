@@ -92,12 +92,12 @@ module.exports={
         return responses;
     },
 
-    saveRegistration:async function(fields){
+    saveRegistration: async function(fields){
         const registration=new Registration({
-            name:fields.name.stringValue,
-            address:fields.address.stringValue,
-            phone:fields.phone.stringValue,
-            email:fields.email.stringValue,
+            name: fields.name.stringValue,
+            address: fields.address.stringValue,
+            phone: fields.phone.stringValue,
+            email: fields.email.stringValue,
             datesent:Date.now()
         });
         try{
