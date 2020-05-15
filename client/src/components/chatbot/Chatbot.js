@@ -74,7 +74,7 @@ class Chatbot extends Component{
         try{
             if(this.state.clientToken===false){
                 const res=await axios.get('/api/get_client_token');
-                this.setState({clientToken:res.data.token});
+                this.setState({clientToken :res.data.token});
             }
             var config={
                 headers:{
@@ -89,11 +89,12 @@ class Chatbot extends Component{
                 config
             );
             let says={};
+
             if(res.data.queryResult.fulfillmentMessages){
                 for(let msg of res.data.queryResult.fulfillmentMessages){
                     says={
                         speaks:'BOT',
-                        mag:msg
+                        msg:msg
                     }
                     this.setState({messages:[...this.state.messages,says]});
                 }
@@ -128,11 +129,12 @@ class Chatbot extends Component{
             setTimeout(()=>{
                 resolve(x);
             },x*1000);
-        });
+        })
     }
 
     async componentDidMount(){
         this.df_event_query('Welcome');
+        
         if(window.location.pathname==='/shop' && !this.state.welcomeSent)
         {
             await this.resolveAfterXSeconds(1);
@@ -190,7 +192,7 @@ class Chatbot extends Component{
 
     renderOneMessage(message, i){
         if(message.msg && message.msg.text && message.msg.text.text){
-            return <Message key={i} speaks={message.speaks} text={message.msg.text.text} />;
+            return < Message key={i} speaks={message.speaks} text={message.msg.text.text} />;
         }
         else if(message.msg && message.msg.payload && message.msg.payload.cards){
             return <div key={i}>
