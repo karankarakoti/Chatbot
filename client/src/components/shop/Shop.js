@@ -3,9 +3,9 @@ import ItemList from './ItemList';
 
 const Shop=() =>(
         <div>
-        <h2>Here is the github link of the project</h2>
-        <h3>https://github.com/karankarakoti/Chatbot.git</h3>
-        <h4>You need to install additional modules. You can find those modules in package.json file</h4>
+        <h4>Here is the github link of the project</h4>
+        <a>https://github.com/karankarakoti/Chatbot.git</a>
+        <h6>You need to install additional modules. You can find those modules in package.json file</h6>
         </div>
     )
 
