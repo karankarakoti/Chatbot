@@ -2,7 +2,7 @@ import React from 'react';
 
 const About=() =>(
         <div>
-        <h1>About US</h1>
+        <h2>This project is build on NODE JS and Dialogflow</h2>
         </div>
     )
 
